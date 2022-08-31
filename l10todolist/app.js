@@ -23,14 +23,36 @@ function addnew(todo){
         todotext = todo.text;
     }
 
-    const li = document.createElement('li');
-    li.appendChild(document.createTextNode(todotext));
-    // console.log(li);
+    if(todotext){
+        const li = document.createElement('li');
+        // console.log(todotext);
+        // console.log(todo.done);
 
-    getul.appendChild(li);
-    gettextbox.value = '';
+        if(todo && todo.done){
+            li.classList.add('done');
+        }
+        
+        li.appendChild(document.createTextNode(todotext));
+        // console.log(li);
+    
+        getul.appendChild(li);
+        gettextbox.value = '';
+    
+        updatelocalstorage();
 
-    updatelocalstorage();
+        // left click
+        li.addEventListener('click',function(){
+            li.classList.toggle('done');
+            updatelocalstorage();
+        });
+
+        // right click
+        li.addEventListener('contextmenu',function(){
+            li.remove();
+            updatelocalstorage();
+        }); 
+    }
+
 }
 
 
