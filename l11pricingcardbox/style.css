@@ -1,0 +1,97 @@
+:root{
+    --color1:linear-gradient(
+        steelblue,
+        skyblue
+    );
+
+    --color2:linear-gradient(
+        steelblue,
+        skyblue
+    );
+
+    --color3:linear-gradient(
+        steelblue,
+        skyblue
+    );
+
+}
+
+body{
+    display:grid;
+    place-items:center;
+}
+
+.title h3{
+    font-size:40px;
+    font-weight:300;
+    text-align:center;
+}
+
+.toggle-container{
+    display:flex;
+    justify-content:center;
+}
+
+.toggle-container > *{
+    margin:0 3px;
+}
+
+.toggle-checkbox{
+    visibility:hidden;
+}
+
+.toggle-label{
+    width:40px;
+    height:20px;
+    background-color:#bbb;
+    border-radius:50px;
+    margin:0 15px;
+    cursor:pointer;
+
+    position: relative;
+}
+
+.toggle-label .ball{
+    width:15px;
+    height:15px;
+    background-color:#f4f4f4;
+    border-radius:50%;
+
+    position: absolute;
+    left:2.5px;
+    top:2.5px;
+}
+
+@keyframes onani {
+    
+    0%{
+        transform:translate(0px) scale(1);
+    }
+    
+    50%{
+        transform:translate(10px) scale(1.2);
+    }
+    
+    100%{
+        transform:translate(17.5px) scale(1);
+
+    }
+
+}
+
+@keyframes offani {
+    
+    0%{
+        transform:translate(17.5px) scale(1);
+    }
+    
+    50%{
+        transform:translate(10px) scale(1.2);
+    }
+    
+    100%{
+        transform:translate(0px) scale(1);
+
+    }
+
+}
