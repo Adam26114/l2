@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Email Box</title>
     <!-- fav icon -->
     <link href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" rel="icon" type="image/png">
-    <!-- fontawsome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./style.css" rel="stylesheet">
 </head>
 <body>
+
+    <div class="container">
+
+        <h3>This is Email Box. You can divide by a comma (",")</h3>
+
+        <form class="form" action="" method="">
+
+            <input type="text" name="emails[]" id="emails" class="form-control" placeholder="Enter email addressess..."/>
+            <textarea name="form-control" id="" class="form-control" placeholder="Enter message"></textarea>
+
+            <div class="justfy-content-end">
+                <button type="submit" class="btn">Send</button>
+            </div>
+
+            <div class="email-container">
+                <span class="email-item">Sample One</span>
+                <span class="email-item">Sample Two</span>
+                <span class="email-item">Sample Three</span>
+                <span class="email-item">Sample Four</span>
+            </div>
+
+        </form>
+
+    </div>
     
     <script src="./app.js" type="text/javascript"></script>
 </body>
