@@ -10,9 +10,16 @@ body{
 }
 
 .container{
+    width:auto;
+
     display:flex;
     justify-content:center;
     align-items:center;
+}
+
+h1{
+    color:#f1f1f1;
+    margin-bottom:50px;
 }
 
 .imgbox{
@@ -25,4 +32,9 @@ body{
     height:100%;
 
     object-fit:cover;
+}
+
+.imgbox.show{
+    width:400px;
+    height:400px;
 }
