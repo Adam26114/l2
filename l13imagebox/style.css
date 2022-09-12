@@ -53,6 +53,8 @@ h1{
     position: absolute;
     left:0;
     top:0;
+
+    transform:translateX(-300%);
 }
 
 .imgbox .title span{
@@ -74,6 +76,15 @@ h1{
     position: absolute;
     left:0;
     bottom:0;
+
+    transform:translateY(300%);
+
+    transform:transform .6s;
+}
+
+.imgbox.show > *{
+    transform:translate(0px,0px);
+    transform:transform .6s;
 }
 
 .btn-close{
@@ -89,10 +100,16 @@ h1{
     top:10px;
 
     z-index:1;
+
+    display:none;
 }
 
 .btn-close:hover{
     border:1px solid red;
+}
+
+.imgbox.show .btn-close{
+    display: block;
 }
 
 .btn{
