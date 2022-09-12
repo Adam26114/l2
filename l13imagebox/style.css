@@ -27,6 +27,10 @@ h1{
     height:100px;
 
     position: relative;
+
+    overflow:hidden;
+
+    transition:all 2s;
 }
 
 .imgbox .img{
