@@ -30,7 +30,7 @@ h1{
 
     overflow:hidden;
 
-    transition:all 2s;
+    transition:width .3s,height .2s;
 }
 
 .imgbox .img{
@@ -123,3 +123,5 @@ h1{
     padding:5px;
     margin-top:5px;
 }
+
+/* 12IB */
