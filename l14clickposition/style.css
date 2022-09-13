@@ -23,4 +23,47 @@ body{
     background-size:cover;
     
     border:1px solid #999;
+
+    position: relative;
+}
+
+.map-container .circle{
+    width:30px;
+    height:30px;
+    background-color:#f8f8f8;
+    border-radius:50%;
+
+    position:absolute;
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+}
+
+.map-container .circle::before{
+    content:'';
+    width:30px;
+    height:30px;
+    background-color:#f4f4f4;
+    border-radius:50%;
+
+    position:absolute;
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%) scale(2);
+}
+
+.map-container .circle::after{
+    content:'';
+    width:30px;
+    height:30px;
+    background-color:#f1f1f1;
+    border-radius:50%;
+
+    position:absolute;
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%) scale(3);
 }
