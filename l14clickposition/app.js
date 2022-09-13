@@ -28,7 +28,7 @@ getmap.addEventListener('click',function(e){
         // console.log(mapleft,maptop);
 
         const curx = cx - mapleft;
-        const cury = cy -maptop;
+        const cury = cy - maptop;
         // console.log(curx,cury);
 
         const circle = document.createElement('span');
@@ -39,9 +39,25 @@ getmap.addEventListener('click',function(e){
         circle.style.left = `${curx}px`;
         circle.style.top = `${cury}px`;
 
+        // e.target.appenChild(circle);
         this.appenChild(circle);
 
+        circle.style.setProperty('--small-color','darkblue');
+        circle.style.setProperty('--medium-color','steelblue');
+        circle.style.setProperty('--large-color','skyblue');
+
+        // console.log(getsmallcolor.value);
+        // console.log(getsmallcolor.selectedIndex);
+
+        if(getsmallcolor.selectedIndex > 0 && getmediumcolor.selectedIndex > 0 &&  getlargcolor.selectedIndex > 0 ){
+            circle.style.setProperty('--small-color',getsmallcolor.value);
+            circle.style.setProperty('--medium-color',getmediumcolor.value);
+            circle.style.setProperty('--large-color',getlargcolor.value);
+    
+        }
+
     }
+
 
 
     removepointer(e);
