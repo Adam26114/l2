@@ -77,3 +77,5 @@ function  removepointer(e){
 
 
 }
+
+// 13MP
