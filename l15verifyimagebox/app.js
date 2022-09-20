@@ -58,6 +58,8 @@ let score = 0;
 startquestion();
 function startquestion(){
 
+    removeselects();
+
     const currentqes = database[currentidx];
     // console.log(currentqes);
 
@@ -116,7 +118,8 @@ getbtn.addEventListener('click',function(){
             getcontainer.innerHTML = `
             <h3>Total Score : ${score * 25}</h3>
             <h4>Your answer correctly at ${score} /${database.length}</h4>
-            <button type="button" class="btn" ondblclick="location.reload()" > CLick to Reload</button>
+            <!-- <button type="button" class="reloadbtn" ondblclick="location.reload()" > CLick to Reload</button> -->
+            <button type="button" class="reloadbtn" onclick="doubleclick()" > CLick to Reload</button> 
             `;
 
 
@@ -133,4 +136,28 @@ function removeselects(){
     getanswers.forEach(function(getanswer){
         return getanswer.checked = false;
     });
+}
+
+let clicktimes = 0;
+
+function doubleclick(){
+    // console.log('hay i am working');
+
+    // console.log(clicktimes);
+
+    if(clicktimes === 0){
+        clicktimes = new Date().getTime();
+
+        // console.log(clicktimes);
+    }else{
+        if((new Date().getTime() - clicktimes) < 1000){
+            // console.log("hello");
+
+            location.reload();
+
+            clicktimes = 0;
+        }else{
+            clicktimes = new Date().getTime();
+        }
+    }
 }
