@@ -146,9 +146,10 @@ function doubleclick(){
     // console.log(clicktimes);
 
     if(clicktimes === 0){
-        clicktimes = new Date().getTime();
-
+        // clicktimes = new Date().getTime();
+        clicktimes = Date.now();
         // console.log(clicktimes);
+
     }else{
         if((new Date().getTime() - clicktimes) < 1000){
             // console.log("hello");
